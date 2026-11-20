@@ -1,8 +1,8 @@
 # beanstalk-seed
 
-A one-evening spike: put jobs on a [beanstalkd](https://beanstalkd.github.io/) queue and work them from Ruby and from C++, plus a small Rails app for looking at the queue.
+A small spike: put jobs on a [beanstalkd](https://beanstalkd.github.io/) queue and work them from Ruby and from C++, plus a small Rails app for looking at the queue.
 
-> **Status: abandoned experiment, dormant since 2014-11-09.** All three commits were made in a single session by Steven Zeiler during his 2014 Ripple Labs era. Nothing here was verified to run in this pass. Kept as a reference.
+> **Status: abandoned experiment, dormant since 2014-11-09.** All three commits were made within half a minute on the morning of 2014-11-09 by Steven Zeiler, during his 2014 Ripple Labs era. Nothing here was verified to run in this pass. Kept as a reference.
 
 ## What is in here
 
@@ -39,7 +39,7 @@ The committed `c++/queuer` and `c++/worker` binaries are macOS (Mach-O x86_64) b
 
 ## Configuration
 
-None through environment variables. Host, port and tube names are hard-coded in the source files.
+The Ruby and C++ scripts take no environment variables: host, port and tube names are hard-coded. The Rails app reads `SECRET_KEY_BASE` in production (`web-admin/config/secrets.yml`).
 
 ## How it works
 

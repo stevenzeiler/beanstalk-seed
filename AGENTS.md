@@ -2,7 +2,7 @@
 
 ## What this is
 
-`beanstalk-seed` is a throwaway 2014 experiment with beanstalkd queues in Ruby and C++, plus a Rails 4.1 admin app. Dormant since 2014-11-09. There is no library and no product here.
+`beanstalk-seed` is a small 2014 experiment with beanstalkd queues in Ruby and C++, plus a Rails 4.1 admin app. Dormant since 2014-11-09. There is no library and no product here.
 
 ## Stack
 
@@ -35,4 +35,4 @@
 
 - May: fix bugs, improve docs, add tests, open pull requests against `master`.
 - May not, without Steven: archive or delete the repo, publish to npm or any registry, rewrite git history, change the license, or merge their own pull requests.
-- Never touch `web-admin/config/secrets.yml` to add real values; it is committed (see STATUS).
+- Never put real values in `web-admin/config/secrets.yml`: it is committed (see STATUS). Production reads `SECRET_KEY_BASE` from the environment.

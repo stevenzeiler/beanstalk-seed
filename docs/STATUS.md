@@ -13,12 +13,12 @@ Last checked: 2026-11-20 (github-audit pass 02). Docs-only pass: nothing was ins
 - Ruby queuer and worker use tube `my-tube`, the C++ pair uses `test`, so they do not interoperate.
 - `c++/queuer` and `c++/worker` are committed macOS binaries; `c++/.worker.cpp.swp` is a committed vim swap file.
 - `web-admin` is Rails 4.1.0 and very unlikely to install on current Ruby.
-- `web-admin/config/secrets.yml` is committed and contains a `secret_key_base` entry. It is probably the Rails generator's default **(inference)**, but git history holds it either way; whether to rotate or clean history is Steven's call. The value is not copied here.
+- `web-admin/config/secrets.yml` is committed with literal `secret_key_base` values for development and test (production reads `SECRET_KEY_BASE`). They look like the random keys `rails new` writes **(inference)**, so they only matter if this app was ever run with them. Git history holds them either way; whether to rotate or clean history is Steven's call. The values are not copied here.
 - No license is declared.
 
 ## What's next
 
-- Steven's call: archive this repo (it is a one-evening spike with no ongoing value) or keep as a reference.
+- Steven's call: archive this repo (it is a small spike with no ongoing value) or keep as a reference.
 - If kept: remove the binaries and swap file, add a `.gitignore`.
 
 ## Not yet from the standard
